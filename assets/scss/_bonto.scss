@@ -1,0 +1,393 @@
+$ns: "bento";
+.#{$ns} {
+    padding-top: 2rem;
+
+    @include media-breakpoint-up(lg) {
+        padding-top: 3rem;
+    }
+
+    .container {
+        @include media-breakpoint-up(lg) {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+    }
+
+    &__col-1-wrap {
+        display: flex;
+        flex-direction: column;
+        order: 4;
+        @include media-breakpoint-up(lg) {
+            order: unset;
+        }
+    }
+
+    &__col-1 {
+        @include media-breakpoint-up(lg) {
+            order: unset;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__col-2 {
+        display: flex;
+        flex-direction: column;
+        order: 1;
+
+        @include media-breakpoint-up(lg) {
+            order: unset;
+            // max-width: 47%;
+            height: fit-content;
+        }
+    }
+
+    &__col-4{
+        order: 3;
+    }
+
+    &__col-3 {
+        order: 2;
+
+        @include media-breakpoint-up(lg) {
+            order: unset;
+        }
+    }
+
+    &__schedule {
+        background-color: $schedule-background;
+        margin-bottom: 1.5rem;
+        padding-top: 4rem;
+        padding-bottom: 3.2rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        border-radius: 10px;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__content {
+        background-color: $content-background;
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+        padding-left: 1.2rem;
+        border-radius: 10px;
+        padding-right: 2.6rem;
+
+        @include media-breakpoint-up(lg) {
+            padding-right: 0.6rem;
+        }
+
+        &--schedule {
+            flex: 1;
+            padding-right: 1rem;
+            padding-bottom: 0;
+            overflow: hidden;
+            height: 11.5rem;
+
+            @include media-breakpoint-up(lg) {
+                margin-left: 1rem;
+            }
+        }
+
+        img {
+            width: 75%;
+            @include media-breakpoint-up(lg) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__heading {
+        font-size: 2rem;
+        font-weight: 600;
+        letter-spacing: -2px;
+        line-height: 32px;
+        margin-bottom: 1.2rem;
+        font-family: "DMSans", sans-serif;
+
+        @include media-breakpoint-up(lg) {
+            font-weight: 500;
+        }
+
+        &--ai-content {
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 2.5rem;
+                max-width: 138px;
+            }
+        }
+
+        &--account {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0;
+            letter-spacing: normal;
+
+            @include media-breakpoint-up(lg) {
+                font-weight: 500;
+                max-width: 138px;
+                line-height: 22px;
+                letter-spacing: -2px;
+            }
+        }
+
+        &--consistent {
+            font-size: 1.5rem;
+            line-height: 22px;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            letter-spacing: normal;
+
+            @include media-breakpoint-up(lg) {
+                font-weight: 500;
+                margin-bottom: 1rem;
+                max-width: 138px;
+                letter-spacing: -2px;
+            }
+        }
+
+        &--growth {
+            font-size: 3rem;
+            font-weight: 500;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        &--sch-2heading {
+            font-size: 1.6rem;
+            font-weight: 600;
+            letter-spacing: normal;
+            line-height: 22px;
+
+            @include media-breakpoint-up(lg) {
+                max-width: 138px;
+                letter-spacing: -1px;
+                font-size: 1.4rem;
+            }
+        }
+
+        &--growthcontent {
+            color: $gorwth-content-text;
+            letter-spacing: 0px;
+            font-size: 2rem;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    &__simpletext {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 2rem;
+        line-height: 16px;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 14px;
+        }
+
+        &--margin {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__purple {
+        color: $schedule-text-quick-color;
+        font-style: italic;
+    }
+
+    &__social-media {
+        background-color: $social-background;
+        padding: 3rem 2rem 3rem;
+        text-align: center;
+        border-radius: 10px;
+        margin-bottom: 1.5rem;
+
+        &__caption {
+            margin-top: 0.5rem;
+            color: $socila-text-color;
+            font-size: 19px;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 16px;
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding: 3rem 1rem 2.5rem;
+        }
+    }
+
+    &__social-heading {
+        color: $socila-heading-color;
+        font-family: "DMSans", sans-serif;
+        line-height: 38px;
+        margin-bottom: 1rem;
+        font-size: 3rem;
+        line-height: 45px;
+
+        @include media-breakpoint-up(lg) {
+            line-height: normal;
+            font-size: calc(1.375rem + 1.5vw);
+        }
+    }
+
+    &__speed {
+        color: $social-yellow-text-color;
+    }
+
+    &__stars-img {
+        max-width: 100%;
+        height: auto;
+        width: 76%;
+
+        @include media-breakpoint-up(lg) {
+            width: 36%;
+        }
+    }
+
+    &__acc-sch {
+        display: flex;
+        margin-bottom: 1.5rem;
+        flex-direction: column;
+
+        @include media-breakpoint-up(lg) {
+            flex-direction: row;
+        }
+    }
+
+    &__growth-cols {
+        margin-bottom: 0;
+        flex-direction: column;
+
+        @include media-breakpoint-up(lg) {
+            flex-direction: row;
+        }
+    }
+
+    &__accounts {
+        background-color: $platform-background;
+        padding: 1rem 16px 1.5rem 1rem;
+        border-radius: 10px;
+        margin-bottom: 1.5rem;
+
+        @include media-breakpoint-up(lg) {
+            padding: 1rem 0 0.5rem 1rem;
+            margin-bottom: unset;
+        }
+
+        &__image-container {
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        &__img {
+            height: auto;
+            width: 100%;
+
+            @include media-breakpoint-up(lg) {
+                width: 136%;
+            }
+        }
+    }
+
+    &__growth {
+        background-color: $platform-background;
+        padding: 1.5rem 1.2rem 1.5rem 1.2rem;
+        border-radius: 10px;
+        margin-bottom: 1.5rem;
+        order: 2;
+
+        @include media-breakpoint-up(lg) {
+            order: unset;
+            padding: 1.5rem 1.2rem 0.5rem 1.2rem;
+            margin-bottom: 0;
+        }
+
+        &__img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__schedule-2 {
+        background-color: $Purple-100;
+        padding: 1.5rem 0.5rem 0.5rem 0.5rem;
+        border-radius: 10px;
+        text-align: center;
+        margin-bottom: 1.5rem;
+
+        @include media-breakpoint-up(lg) {
+            padding: 2.9rem 0 0.5rem 1.2rem;
+            text-align: unset;
+            margin-bottom: unset;
+        }
+
+        &__container {
+            overflow: hidden;
+        }
+
+        &__image {
+            width: 18rem;
+        }
+    }
+
+    &__growth-content {
+        background-color: $gorwth-background;
+        padding: 2rem 2rem 0 2rem;
+        display: flex;
+        width: 100%;
+        border-radius: 10px;
+        align-items: center;
+        flex: 0 0 25rem;
+        flex-direction: column;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        order: 1;
+
+        @include media-breakpoint-up(lg) {
+            order: unset;
+            margin-inline-start: 1rem;
+            padding: 1rem 14px 0 1rem;
+            margin-bottom: 0;
+            flex-direction: row;
+            text-align: center;
+        }
+
+        img {
+            width: 92%;
+        }
+    }
+
+    &__image-container {
+        &--consistent {
+            height: 10rem;
+
+            @include media-breakpoint-up(lg) {
+                height: 5rem;
+                position: relative;
+            }
+        }
+    }
+
+    &__image {
+        height: auto;
+        width: 63%;
+        max-width: 100%;
+
+        @include media-breakpoint-up(lg) {
+            width: 100%;
+        }
+
+        &--consistent-image {
+            @include media-breakpoint-up(lg) {
+                position: absolute;
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'DMSans';
+    src: url('../fonts/static/DMSans-Medium.ttf') format('ttf'),
+        url('../fonts/static/DMSans-MediumItalic.ttf') format('ttf'),
+         url('../fonts/static/DMSans-Regular.ttf') format('ttf');
+  }
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import'./variables';
+@import './bonto';
+@import './common'
